@@ -1,16 +1,9 @@
-
-
-// ***************** project news app *************************** //
-
-// import 'package:firebase_core/firebase_core.dart';
-// import 'package:flut_demo/screens/signin_screen.dart';
 import 'package:flutter/material.dart';
+// import 'package:news_app/screens/signin_screen.dart';
 import 'package:newsapp/screens/signin_screen.dart';
-import './screens/home_screen.dart';
+// import './screens/home_screen.dart';
 
-void main() async{
-  WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp();
+void main() {
   runApp(MyApp());
 }
 
@@ -22,10 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SigninScreen(),
+      home: SigninScreen(),
     );
   }
 }
-
-
-

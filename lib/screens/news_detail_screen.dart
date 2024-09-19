@@ -4,7 +4,7 @@ import '../models/news.dart';
 class NewsDetailScreen extends StatelessWidget {
   final News news;
 
-  const NewsDetailScreen({required this.news});
+  NewsDetailScreen({required this.news});
 
   @override
   Widget build(BuildContext context) {
@@ -19,19 +19,19 @@ class NewsDetailScreen extends StatelessWidget {
             if (news.urlToImage != null && news.urlToImage!.isNotEmpty)
               Image.network(news.urlToImage!)
             else
-              const Placeholder(fallbackHeight: 200, fallbackWidth: double.infinity),
+              Placeholder(fallbackHeight: 200, fallbackWidth: double.infinity),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 news.description ?? 'No Description Available',
-                style: const TextStyle(fontSize: 16),
+                style: TextStyle(fontSize: 16),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 news.content ?? 'No Content Available',
-                style: const TextStyle(fontSize: 14),
+                style: TextStyle(fontSize: 14),
               ),
             ),
           ],

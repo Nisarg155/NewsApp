@@ -6,8 +6,10 @@ class NewsApi {
   final String apiKey = 'a21390a3d5374e1f8b23c1259425050b';
   final String baseUrl = 'https://newsapi.org/v2/everything';
 
-  Future<List<News>> fetchNews(String category) async {
-    final url = '$baseUrl?q=demon slayer&apiKey=$apiKey';
+  // Modify this function to accept a dynamic search query
+  Future<List<News>> fetchNews(String query) async {
+    // Dynamically add the search term (query) to the URL
+    final url = '$baseUrl?q=$query&apiKey=$apiKey';
     final response = await http.get(Uri.parse(url));
 
     if (response.statusCode == 200) {
